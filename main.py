@@ -9,7 +9,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import json
 
-# 1. Load data from the JSON file
+# 1. Load data from the JSON fil
 with open('purchases.json', 'r') as file:
     data = json.load(file)
 
