@@ -3,6 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    image: ervincaravaliibarra/machinelearning:latest
     ports:
       - "8000:8000"
     volumes:
