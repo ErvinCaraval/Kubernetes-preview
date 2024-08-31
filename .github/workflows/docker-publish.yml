@@ -29,8 +29,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/machinglearning:latest
-            ghcr.io/machinglearning:${{ github.sha }}
+            ghcr.io/${{ github.repository_owner }}/machinglearning:latest
+            ghcr.io/${{ github.repository_owner }}/machinglearning:${{ github.sha }}
 
       - name: Logout from GitHub Container Registry
         run: docker logout ghcr.io
