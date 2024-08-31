@@ -29,8 +29,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ ervincaraval }}/machinglearning:latest
-            ghcr.io/${{ ervincaraval }}/machinglearning:${{ github.sha }}
+            ghcr.io/ervincaraval/machinglearning:latest
+            ghcr.io/ervincaraval/machinglearning:${{ github.sha }}
 
       - name: Logout from GitHub Container Registry
         run: docker logout ghcr.io
