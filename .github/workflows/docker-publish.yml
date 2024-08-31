@@ -21,7 +21,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB}}  # Asegúrate de usar el token correcto
+          password: ${{ secrets.GITHUB_TOKEN }}  # Asegúrate de usar el token correcto
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
@@ -29,8 +29,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/machinglearning:latest
-            ghcr.io/${{ github.repository_owner }}/machinglearning:${{ github.sha }}
+            ghcr.io/machinglearning:latest
+            ghcr.io/machinglearning:${{ github.sha }}
 
       - name: Logout from GitHub Container Registry
         run: docker logout ghcr.io
